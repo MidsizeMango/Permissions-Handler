@@ -33,6 +33,16 @@ public class MainActivity extends PermissionHelperActivity {
 }
 ```
 
+#### Fragment
+
+Fragment extends PermissionHelperFragment
+
+```Kotlin
+
+public class MainFragment extends PermissionHelperFragment {
+
+}
+```
 Usage of Requesting Permission in Activity
 
 ```Kotlin
@@ -52,32 +62,68 @@ requestPermission(Permissions.CAMERA, object: PermissionResult{
 })
 ```
 
-#### Fragment
-
-Fragment extends PermissionHelperFragment
-
-```Kotlin
-
-public class MainFragment extends PermissionHelperFragment {
-
-}
-```
-
-Usage of Requesting Permission in Fragment
+# Permission Requests
+#### For Single Permission
 
 ```Kotlin
 requestPermission(Permissions.ACCESS_COARSE_LOCATION, object: PermissionResult{
-       override fun permissionGranted() {
-             toast("Permissions Granted")
-       }
+    override fun permissionGranted() {
+        toast("Permissions Granted")
+    }
 
-       override fun permissionDenied() {
-             toast("Permissions Denied")
-       }
+    override fun permissionDenied() {
+        toast("Permissions Denied")
+    }
 
-       override fun permissionDeniedPermanently() {
-             //openSettingsPermission(applicationContext)
-             toast("Allow Permissions from App Settings")
-       }
+    override fun permissionDeniedPermanently() {
+        //openSettingsPermission(applicationContext)
+        toast("Allow Permissions from App Settings")
+    }
 })
 ```
+
+#### For Multiple Permissions
+
+```Kotlin
+val permissions = arrayOf(Permissions.ACCESS_COARSE_LOCATION,Permissions.READ_EXTERNAL_STORAGE,
+                Permissions.WRITE_EXTERNAL_STORAGE,Permissions.READ_CONTACTS)
+                
+requestMultiplePermissions(Permissions.ACCESS_COARSE_LOCATION, object: PermissionResult{
+    override fun permissionGranted() {
+        toast("Permissions Granted")
+    }
+
+    override fun permissionDenied() {
+        toast("Permissions Denied")
+    }
+
+    override fun permissionDeniedPermanently() {
+        //openSettingsPermission(applicationContext)
+        toast("Allow Permissions from App Settings")
+    }
+})
+```
+
+
+# Other Usage
+#### To Check if Permission is Granted or Not
+
+```Kotlin
+val granted: Boolean = isPermissionGranted(this, Permissions.CAMERA)
+```
+
+#### To Check for Multiple Permissions are Granted or Not
+
+```Kotlin
+val permissions = arrayOf(Permissions.ACCESS_COARSE_LOCATION,Permissions.READ_EXTERNAL_STORAGE,
+                Permissions.WRITE_EXTERNAL_STORAGE,Permissions.READ_CONTACTS)
+val granted: Boolean = arePermissionsGranted(this, permissions)
+```
+
+#### For Settings Application Details
+need class extend FragmentManagePermission or ActivityManagePermission
+
+```Kotlin
+ openSettingsPermission(applicationContext);
+```
+
