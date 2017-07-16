@@ -6,12 +6,13 @@ Simple Module to simplify Android Runtime Permissions Integration in App. Writte
 
 in build.gradle
 
-```allprojects {
-      repositories {
-      ...
-      maven { url 'https://jitpack.io' }
-      }
-  }
+```
+allprojects {
+   repositories {
+   ...
+   maven { url 'https://jitpack.io' }
+   }
+}
 ```
 ```Gradle
 dependencies {
