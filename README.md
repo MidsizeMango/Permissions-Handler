@@ -28,7 +28,7 @@ Activity extends PermissionHelperActivity
 
 ```Kotlin
 
-class MainActivity : PermissionHelperActivity(){
+class MainActivity : PermissionHelperActivity() {
    ...
 }
 ```
