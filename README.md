@@ -29,7 +29,7 @@ Activity extends PermissionHelperActivity
 ```Kotlin
 
 public class MainActivity extends PermissionHelperActivity {
-
+   ...
 }
 ```
 
@@ -40,7 +40,7 @@ Fragment extends PermissionHelperFragment
 ```Kotlin
 
 public class MainFragment extends PermissionHelperFragment {
-
+   ...
 }
 ```
 Usage of Requesting Permission in Activity
