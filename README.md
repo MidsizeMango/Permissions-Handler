@@ -3,7 +3,6 @@ Simple Module to simplify Android Runtime Permissions Integration in App. Writte
 
 [![](https://jitpack.io/v/MidsizeMango/Permissions-Handler.svg)](https://jitpack.io/#MidsizeMango/Permissions-Handler)
 ### Import
-
 in build.gradle
 
 ```
