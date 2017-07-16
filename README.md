@@ -7,15 +7,14 @@ Simple Module to simplify Android Runtime Permissions Integration in App. Writte
 in build.gradle
 
 ```allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-
+      repositories {
+      ...
+      maven { url 'https://jitpack.io' }
+      }
+  }
 ```
 ```Gradle
 dependencies {
-	        compile 'com.github.MidsizeMango:Permissions-Handler:-SNAPSHOT'
-	}
+    compile 'com.github.MidsizeMango:Permissions-Handler:-SNAPSHOT'
+}
 ```
