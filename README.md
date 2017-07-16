@@ -28,7 +28,7 @@ Activity extends PermissionHelperActivity
 
 ```Kotlin
 
-public class MainActivity extends PermissionHelperActivity {
+class MainActivity : PermissionHelperActivity(){
    ...
 }
 ```
@@ -39,7 +39,7 @@ Fragment extends PermissionHelperFragment
 
 ```Kotlin
 
-public class MainFragment extends PermissionHelperFragment {
+class MainFragment : PermissionHelperFragment() {
    ...
 }
 ```
