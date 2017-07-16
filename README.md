@@ -16,7 +16,7 @@ allprojects {
 ```
 ```Gradle
 dependencies {
-    compile 'com.github.MidsizeMango:Permissions-Handler:-SNAPSHOT'
+	 compile 'com.github.MidsizeMango:Permissions-Handler:v0.1'
 }
 ```
 
