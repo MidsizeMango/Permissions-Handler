@@ -121,8 +121,6 @@ val granted: Boolean = arePermissionsGranted(this, permissions)
 ```
 
 #### For Settings Application Details
-need class extend FragmentManagePermission or ActivityManagePermission
-
 ```Kotlin
  openSettingsPermission(applicationContext);
 ```
